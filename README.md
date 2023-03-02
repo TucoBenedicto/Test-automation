@@ -22,7 +22,7 @@ git remote add origin https://github.com/TucoBenedicto/Test-automation.git
 pour finir un push :
 (-u = upstream)
 comprendre l'upstream : https://code-garage.fr/blog/a-quoi-sert-le-parametre-u-lors-d-un-git-push/#:~:text=Lorsque%20l%27on%20pousse%20les,appelle%20"l%27upstream".
-git push -u clone main (uniquemenent la 1ere fois) , puis :
+git push -u clone main (uniquemenent la 1ere fois) , puis le restant du temps :
 git push clone
 
 
