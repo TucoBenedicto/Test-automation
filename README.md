@@ -65,6 +65,10 @@ et pour finir un "pull" pour recuperer toutes les branches et les mettre dans le
 
 > git pull origin
 
+recuperer toutes les branches du depot (reposotory) distant (de chez openclassroom)
+
+> git fetch --all
+
 
 # testez-vos-applications-front-end-avec-javascript
 Code source de Façadia - le projet fil rouge du cours "Testez vos applications Front End avec Javascript" 
