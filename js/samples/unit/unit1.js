@@ -1,11 +1,16 @@
 /**
- * 
- * @param {string} name 
+ *
+ * @param {string} name
  */
-export const sayHello = name => {
-    if (!name) {
-        return "Hello, World"
-    }
+export const sayHello = (name) => {
+  if (!name) {
+    return "Hello, World";
+  }
 
-    return `Hello, ${name}`
-}
+  // J'ajoute ici cette ligne dans ma fonction
+  if (name === "Alexandra") {
+    return "Bonjour Alexandra";
+  }
+
+  return `Hello, ${name}`;
+};
