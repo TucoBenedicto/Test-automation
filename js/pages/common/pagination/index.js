@@ -2,7 +2,7 @@ import { ITEMS_PER_PAGE } from '../../../constants.js'
 import Home from '../../home/index.js'
 
 
-const Pagination = {
+const Pagination = { //Objet littéral
     /**
      * 
      * @param {number} numberOfSensors 
