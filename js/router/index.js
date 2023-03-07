@@ -25,8 +25,17 @@ const routes = [
     },
 ]
 
-const parseLocation = () => location.hash.slice(1).toLocaleLowerCase() || '/'
-
+/*
+Ce code définit une fonction appelée parseLocation qui analyse l'URL actuelle de la page web et renvoie une chaîne de caractères 
+représentant l'emplacement courant dans l'application.
+Plus précisément, la fonction utilise la propriété location.hash pour obtenir la partie de l'URL qui suit le symbole "#" 
+(aussi appelé fragment d'URL). La méthode slice(1) est utilisée pour supprimer le "#" de la chaîne. Ensuite, la méthode 
+toLocaleLowerCase() est utilisée pour convertir la chaîne en minuscules, ce qui peut faciliter la comparaison de chaînes ultérieure.
+Si la chaîne résultante est vide ou falsy (c'est-à-dire undefined, null, 0, false, ou une chaîne vide), 
+la fonction renvoie le caractère "/" qui représente l'emplacement par défaut de l'application.
+*/
+const parseLocation = () => location.hash.slice(1).toLocaleLowerCase() || '/' 
+// en fonction du chemin on trouve le bon element
 const findComponentByPath = (path, routes) => routes.find(r => r.path.match(new RegExp(`^\\${path}$`, 'gm'))) || undefined;
 
 const bindEventListener = () => {
