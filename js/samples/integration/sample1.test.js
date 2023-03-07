@@ -16,11 +16,11 @@ describe('Sample 1 Integration Test Suites', () => {
         // Je lui injecte du HTML
         $wrapper.innerHTML = `
             <div id="root">
-                <h1 data-testid="hello">Hello, Thomas</h1>
+                <h1 data-testid="monTestIdHello">Hello, Thomas</h1>
             </div>
         `
-
         // Je test le resultat
-        expect(getByTestId($wrapper, "hello").textContent).toEqual("Hello, Thomas")
+        //Attention au "data-testid" present dans la balise h1 et dans la fonction "getByTestID"
+        expect(getByTestId($wrapper, "monTestIdHello").textContent).toEqual("Hello, Thomas")
     })
 })
