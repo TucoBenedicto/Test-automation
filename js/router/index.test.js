@@ -1,13 +1,10 @@
 /**
  * @jest-environment jsdom
  */
-
 import '@testing-library/jest-dom'
-
 import {
     getByTestId
 } from '@testing-library/dom'
-
 import { router } from './index'
 
 
