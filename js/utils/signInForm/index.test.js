@@ -11,7 +11,7 @@ import { //Import des queries getByRole, getByTestId, getByLabelText
 } from "@testing-library/dom";
 import userEvent from '@testing-library/user-event'; //permet de completer les formulaires + gestion des clique de sourie
 import { handleSignInForm } from "./index";
-import SignIn from "../../pages/signIn/index"
+import SignIn from "../../pages/signIn/index" //dans le tp openclassrool il l'appel SignInPage
 
 
 //execution avant chaque test
@@ -29,7 +29,9 @@ afterEach(() => {
 
 describe('SignInForm Integration Test Suites', () => {
 
-  //1er test
+  /*1er TEST 
+  L'utilisateur est deconnecté et se trompe dans l'adresse mail et mots de passe vide
+  */
   it('should display the error message when the e-mail is not correct', () => {
     //Simulation d'une action du clavier
     /*
@@ -48,10 +50,13 @@ describe('SignInForm Integration Test Suites', () => {
     expect(
       //on recuper la class suivant : <span data-testid="user-email-error-msg"
       getByTestId(document.body, 'user-email-error-msg')
-      //Et on test si la class suivante b, s'affiche : class="form-text-error hidden ...
-    ).not.toHaveClass('hidden') //Et on test si la 
+      //Et on test si le message d'rreur s'affiche grace à la class suivante : class="form-text-error hidden ...
+    ).not.toHaveClass('hidden') //not = la classe "class="form-text-error hidden" , ne doit pas exister , donc le message doit etre visible
   })
 
+  /*2eme TEST 
+  L'utilisateur est deconnecté adresse mail ok mais mots de passe vide
+  */
   it('should not display the error message when the e-mail is correct but it should display the password error message', () => {
     userEvent.type(
       getByLabelText(document.body, 'Votre addresse e-mail'),
@@ -69,6 +74,9 @@ describe('SignInForm Integration Test Suites', () => {
     ).not.toHaveClass('hidden')
   })
 
+  /*3eme TEST 
+  L'utilisateur est deconnecté l'adresse mail est bonne mais se trompe dans le mots de passe.
+  */
   it('should display the error message when the password is not correct', () => {
     userEvent.type(
       getByLabelText(document.body, 'Votre addresse e-mail'),
@@ -87,6 +95,9 @@ describe('SignInForm Integration Test Suites', () => {
     ).not.toHaveClass('hidden')
   })
 
+  /*4eme TEST 
+  L'utilisateur est deconnecté l'adresse mail est bonne et le mdp aussi , pas de message d'erreur
+  */
   it('should not display any error messages since both email and password are correct', () => {
     userEvent.type(
       getByLabelText(document.body, 'Votre addresse e-mail'),
