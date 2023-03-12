@@ -4,6 +4,8 @@ Le end-to-end testing consiste à tester notre application comme un utilisateur 
 
 Nightwatch.js va vous permettre d'écrire vos tests en utilisant une syntaxe familière et de piloter les navigateurs via Selenium depuis NodeJS.
 
+!!! Il faut s'aider des exemples detextes fournient par NightWatch pour creer ses propres testes !!!
+
 # probleme rencontré avec la version openclassroom
 
 - Probleme avec le tp , les texte ne se lance pas , car il faut mettre a jours certains packages qui sont obsoletes. en effet les navigateurs lancé par nightwatch doivent etre au meme niveau de mise a jours que que les package npm.
