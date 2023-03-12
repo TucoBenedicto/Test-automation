@@ -6,12 +6,12 @@ Nightwatch.js va vous permettre d'écrire vos tests en utilisant une syntaxe fam
 
 # probleme rencontré avec la version openclassroom
 
-- Probleme avec le tp , les texte ne se lance pas , car il faut mettre a jours certain package qui sont obsolete. en effet les navigateurs lancé par nightwatch doivent etre au meme niveau de mise a jours que que les package npm.
+- Probleme avec le tp , les texte ne se lance pas , car il faut mettre a jours certains packages qui sont obsoletes. en effet les navigateurs lancé par nightwatch doivent etre au meme niveau de mise a jours que que les package npm.
 - attention concernant la mise a jours des packet , il faut eviter de mettre a jours tous les packets , mais plutot uniquement cele :
     "chromedriver": "^111.0.0",
     "geckodriver": "^3.2.0",
     "nightwatch": "^2.6.17"
-- aussi le fichier de configuration nightwatch.json n'est pas a jour lui preferé nightwatch.conf.js
+- Ajout du fichier de configuration nightwatch.conf.js
 - aussi nightwatche est livrée avec des exemple de teste
 
 - tuto a suivre : https://www.lambdatest.com/blog/nightwatch-js-tutorial-selenium-webdriver/
