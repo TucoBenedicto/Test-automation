@@ -1,22 +1,3 @@
-# probleme rencontré avec la version openclassroom
-
-- Probleme avec le tp , les texte ne se lance pas , car il faut mettre a jours certain package qui sont obsolete. en effet les navigateurs lancé par nightwatch doivent etre au meme niveau de mise a jours que que les package npm.
-- attention concernant la mise a jours des packet , il faut eviter de mettre a jours tous les packets , mais plutot uniquement cele :
-    "chromedriver": "^111.0.0",
-    "geckodriver": "^3.2.0",
-    "nightwatch": "^2.6.17"
-- aussi le fichier de configuration nightwatch.json n'est pas a jour lui preferé nightwatch.conf.js
-- aussi nightwatche est livrée avec des exemple de teste
-
-- tuto a suivre : https://www.lambdatest.com/blog/nightwatch-js-tutorial-selenium-webdriver/
-
---------------------------------------
-
-fichier de configuration ,si les fichiers exemples sont dans le chemin suivant : ./node_modules/nightwatch/exemples/tests
-(lancement de firefox)
-
-#  nightwatch.conf.js
-
 // Refer to the online docs for more details:
 // https://nightwatchjs.org/gettingstarted/configuration/
 //
@@ -130,36 +111,3 @@ module.exports = {
     },
   },
 };
-
-# package.json
-
-{
-  "name": "testez-vos-applications-front-end-avec-javascript",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "devDependencies": {
-    "@babel/preset-env": "^7.20.2",
-    "@nightwatch/storybook": "^0.1.15",
-    "@testing-library/dom": "^9.0.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/user-event": "^14.4.3",
-    "babel-jest": "^29.5.0",
-    "chromedriver": "^111.0.0",
-    "geckodriver": "^3.2.0",
-    "jest": "^29.5.0",
-    "jest-html-reporter": "^3.7.0",
-    "nightwatch": "^2.6.17"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
-}
-
-
-
-# testez-vos-applications-front-end-avec-javascript
-Code source de Façadia - le projet fil rouge du cours "Testez vos applications Front End avec Javascript" 
